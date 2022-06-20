@@ -1,0 +1,12 @@
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Aspects" "${PODS_ROOT}/Headers/Public/TXBaseKit" "${PODS_ROOT}/Headers/Public/TXCategoryKit" "${PODS_ROOT}/Headers/Public/TXCommonKit"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Aspects" "${PODS_CONFIGURATION_BUILD_DIR}/TXBaseKit" "${PODS_CONFIGURATION_BUILD_DIR}/TXCategoryKit" "${PODS_CONFIGURATION_BUILD_DIR}/TXCommonKit"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Aspects" -isystem "${PODS_ROOT}/Headers/Public/TXBaseKit" -isystem "${PODS_ROOT}/Headers/Public/TXCategoryKit" -isystem "${PODS_ROOT}/Headers/Public/TXCommonKit"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Aspects" -l"TXBaseKit" -l"TXCategoryKit" -l"TXCommonKit" -framework "Foundation" -framework "Security" -framework "UIKit"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

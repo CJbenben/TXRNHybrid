@@ -1,0 +1,49 @@
+PODS:
+  - Aspects (1.4.1)
+  - TXBaseKit (0.2.7)
+  - TXCategoryKit (0.2.98):
+    - Aspects
+    - TXCategoryKit/Foundation (= 0.2.98)
+    - TXCategoryKit/UIKit (= 0.2.98)
+  - TXCategoryKit/Foundation (0.2.98):
+    - Aspects
+    - TXCategoryKit/Foundation/NSString (= 0.2.98)
+  - TXCategoryKit/Foundation/NSString (0.2.98):
+    - Aspects
+  - TXCategoryKit/UIKit (0.2.98):
+    - Aspects
+    - TXCategoryKit/UIKit/UIButton (= 0.2.98)
+    - TXCategoryKit/UIKit/UIColor (= 0.2.98)
+    - TXCategoryKit/UIKit/UIImage (= 0.2.98)
+    - TXCategoryKit/UIKit/UIView (= 0.2.98)
+  - TXCategoryKit/UIKit/UIButton (0.2.98):
+    - Aspects
+  - TXCategoryKit/UIKit/UIColor (0.2.98):
+    - Aspects
+  - TXCategoryKit/UIKit/UIImage (0.2.98):
+    - Aspects
+  - TXCategoryKit/UIKit/UIView (0.2.98):
+    - Aspects
+  - TXCommonKit (0.2.3)
+
+DEPENDENCIES:
+  - TXBaseKit (= 0.2.7)
+  - TXCategoryKit (= 0.2.98)
+  - TXCommonKit (= 0.2.3)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Aspects
+    - TXBaseKit
+    - TXCategoryKit
+    - TXCommonKit
+
+SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  TXBaseKit: 30e54c0061546488809f6c60fcf8f7e60a7de695
+  TXCategoryKit: a491e4b197a70c3f382425137947e7b6ea611dd9
+  TXCommonKit: fb9d0826ec8a854fd72e98382a1514641becdba4
+
+PODFILE CHECKSUM: b3345675d88e2d0a33aff1747fc6b2518cdc7266
+
+COCOAPODS: 1.11.3

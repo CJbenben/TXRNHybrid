@@ -1,0 +1,15 @@
+platform :ios, '10.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+# source "https://github.com/aliyun/aliyun-specs.git"
+
+inhibit_all_warnings!
+# use_frameworks!
+
+target 'TXRNTest' do
+  
+  pod 'TXBaseKit', '= 0.2.7'
+  pod 'TXCategoryKit', '= 0.2.98'
+  pod 'TXCommonKit', '= 0.2.3'
+  
+end
