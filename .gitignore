@@ -13,5 +13,6 @@
 
 # misc
 .DS_Store
+ios/TXRNTest.xcworkspace/xcuserdata/chenxiaojie.xcuserdatad/UserInterfaceState.xcuserstate
 npm-debug.log*
 yarn-error.log
