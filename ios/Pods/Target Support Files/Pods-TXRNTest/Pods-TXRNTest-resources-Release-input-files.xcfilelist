@@ -1,3 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-TXRNTest/Pods-TXRNTest-resources.sh
-${PODS_ROOT}/TXBaseKit/TXBaseKit/Resources/public_base_loading_bg@3x.png
-${PODS_ROOT}/TXBaseKit/TXBaseKit/Resources/public_navi_left_back@3x.png
+${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle

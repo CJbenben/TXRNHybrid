@@ -1,1 +1,0 @@
-../../../TXCategoryKit/TXCategoryKit/UIKit/UIImage/UIImage+loadSPBundle.h

@@ -1,1 +1,0 @@
-../../../TXCommonKit/TXCommonKit/TXPrivacyPermissionsTool.h
