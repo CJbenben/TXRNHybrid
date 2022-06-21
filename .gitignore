@@ -13,8 +13,8 @@
 
 # misc
 .DS_Store
-ios/TXRNTest.xcworkspace/xcuserdata/chenxiaojie.xcuserdatad/UserInterfaceState.xcuserstate
-ios/TXRNTest.xcworkspace/xcuserdata/chenxiaojie.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+ios/TXRNTest.xcworkspace/xcuserdata/*
+ios/Pods/Pods.xcodeproj/xcuserdata/*
 npm-debug.log*
 yarn-error.log
 
