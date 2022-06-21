@@ -6,48 +6,90 @@
 //
 
 #import "ViewController.h"
-#import "RNPageController.h"
+#import <React/RCTRootView.h>
+//#import <React/RCTBundleURLProvider.h>
+//#import <React/RCTEventEmitter.h>
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *dataAry;
 
 @end
 
 @implementation ViewController
 
+- (UITableView *)tableView {
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+    }
+    return _tableView;
+}
+
+- (NSArray *)dataAry {
+    if (_dataAry == nil) {
+        _dataAry = @[
+        @{@"title": @"跳转固定页面", @"pagePath": @"TXRNTest"},
+        @{@"title": @"跳转指定页面A", @"pagePath": @"A"},
+        @{@"title": @"跳转指定页面B", @"pagePath": @"B"}];
+    }
+    return _dataAry;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor cyanColor];
+    self.title = @"RN混合开发";
+    [self.view addSubview:self.tableView];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    RNPageController *vc = [[RNPageController alloc] init];
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataAry.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identifier = @"UITableViewCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    cell.textLabel.text = [self.dataAry[indexPath.row] objectForKey:@"title"];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    NSString *moduleName = [self.dataAry[indexPath.row] objectForKey:@"pagePath"];
+    
+    // 手动拼接jsCodeLocation用于开发环境
+    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
+    // release之后从包中读取名为main的静态js bundle
+    //jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+    // 通过RCTBundleURLProvider生成，用于开发环境
+    //jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
+    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:moduleName initialProperties:
+                             @{ @"scores" : @[
+                                 @{
+                                     @"name" : @"Alex",
+                                     @"value": @"42"
+                                 },
+                                 @{
+                                     @"name" : @"Joel",
+                                     @"value": @"10"
+                                 }
+                             ]
+                             } launchOptions:nil];
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view = rootView;
     [self.navigationController pushViewController:vc animated:YES];
-    
-//    NSLog(@"High Score Button Pressed");
-//    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
-//
-//    RCTRootView *rootView =
-//      [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
-//                                  moduleName: @"RNHighScores"
-//                           initialProperties:
-//                             @{
-//                               @"scores" : @[
-//                                 @{
-//                                   @"name" : @"Alex",
-//                                   @"value": @"42"
-//                                  },
-//                                 @{
-//                                   @"name" : @"Joel",
-//                                   @"value": @"10"
-//                                 }
-//                               ]
-//                             }
-//                               launchOptions: nil];
-//    UIViewController *vc = [[UIViewController alloc] init];
-//    vc.view = rootView;
-//    [self presentViewController:vc animated:YES completion:nil];
-    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
 }
 
 @end

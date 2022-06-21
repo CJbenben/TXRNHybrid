@@ -15,7 +15,6 @@
 		7DEEC73A286043370060BEDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DEEC739286043370060BEDF /* Assets.xcassets */; };
 		7DEEC73D286043370060BEDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEEC73B286043370060BEDF /* LaunchScreen.storyboard */; };
 		7DEEC740286043370060BEDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEC73F286043370060BEDF /* main.m */; };
-		7DEEC748286055060060BEDF /* RNPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEC747286055060060BEDF /* RNPageController.m */; };
 		7DEEC74A28606FAB0060BEDF /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 7DEEC74928606FAB0060BEDF /* main.jsbundle */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +32,6 @@
 		7DEEC73C286043370060BEDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DEEC73E286043370060BEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DEEC73F286043370060BEDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7DEEC746286055060060BEDF /* RNPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPageController.h; sourceTree = "<group>"; };
-		7DEEC747286055060060BEDF /* RNPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPageController.m; sourceTree = "<group>"; };
 		7DEEC74928606FAB0060BEDF /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		CA59E96EDAEDDBB1E8F7C508 /* Pods-TXRNTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXRNTest.debug.xcconfig"; path = "Target Support Files/Pods-TXRNTest/Pods-TXRNTest.debug.xcconfig"; sourceTree = "<group>"; };
 		E56BA8D260D18A37AADBFAE2 /* libPods-TXRNTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TXRNTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,8 +85,6 @@
 				7DEEC731286043350060BEDF /* SceneDelegate.m */,
 				7DEEC733286043350060BEDF /* ViewController.h */,
 				7DEEC734286043350060BEDF /* ViewController.m */,
-				7DEEC746286055060060BEDF /* RNPageController.h */,
-				7DEEC747286055060060BEDF /* RNPageController.m */,
 				7DEEC74928606FAB0060BEDF /* main.jsbundle */,
 				7DEEC736286043350060BEDF /* Main.storyboard */,
 				7DEEC739286043370060BEDF /* Assets.xcassets */,
@@ -243,7 +238,6 @@
 			files = (
 				7DEEC735286043350060BEDF /* ViewController.m in Sources */,
 				7DEEC72F286043350060BEDF /* AppDelegate.m in Sources */,
-				7DEEC748286055060060BEDF /* RNPageController.m in Sources */,
 				7DEEC740286043370060BEDF /* main.m in Sources */,
 				7DEEC732286043350060BEDF /* SceneDelegate.m in Sources */,
 			);

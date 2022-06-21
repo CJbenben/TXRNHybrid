@@ -12,7 +12,7 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          这是一个 RN 页面
+          这是一个 B 页面
         </Text>
       </View>
     );
