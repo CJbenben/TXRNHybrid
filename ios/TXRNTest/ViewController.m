@@ -33,7 +33,8 @@
         _dataAry = @[
         @{@"title": @"跳转固定页面", @"pagePath": @"TXRNTest"},
         @{@"title": @"ActivityIndicator", @"pagePath": @"ActivityIndicator"},
-        @{@"title": @"Button", @"pagePath": @"Button"}];
+        @{@"title": @"Button", @"pagePath": @"Button"},
+        @{@"title": @"FlatList", @"pagePath": @"FlatList"}];
     }
     return _dataAry;
 }

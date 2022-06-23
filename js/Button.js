@@ -18,7 +18,7 @@ export default class App extends Component<Props> {
           accessibilityLabel to help make your app usable by everyone.
         </Text>
         <Button
-          title="Press me"
+          title="Press me!"
           // onPress={() => Alert.alert('Simple Button pressed')}
           onPress={() => {console.log('Simple Button pressed')}}
         />
