@@ -3,9 +3,9 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './App';
-import ActivityIndicator from './ActivityIndicator';
-import Button from './Button';
+import App from './js/App';
+import ActivityIndicator from './js/ActivityIndicator';
+import Button from './js/Button';
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
