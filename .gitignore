@@ -13,6 +13,7 @@
 
 # misc
 .DS_Store
+.gitignore.swp
 ios/TXRNTest.xcworkspace/xcuserdata/*
 ios/Pods/Pods.xcodeproj/xcuserdata/*
 npm-debug.log*

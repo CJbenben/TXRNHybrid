@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  ActivityIndicator,
   Platform,
   StyleSheet,
   Text,
@@ -11,9 +12,8 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          这是一个 B 页面
-        </Text>
+        <ActivityIndicator size="large" color="#000000"></ActivityIndicator>
+        <Text style={styles.title}>正在请求...</Text>
       </View>
     );
   }
@@ -26,9 +26,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
+  title: {
+    paddingTop: 10,
+    fontSize: 16,
     textAlign: 'center',
-    margin: 10,
   }
  });
