@@ -32,8 +32,8 @@
     if (_dataAry == nil) {
         _dataAry = @[
         @{@"title": @"跳转固定页面", @"pagePath": @"TXRNTest"},
-        @{@"title": @"跳转指定页面A", @"pagePath": @"A"},
-        @{@"title": @"跳转指定页面B", @"pagePath": @"B"}];
+        @{@"title": @"ActivityIndicator", @"pagePath": @"ActivityIndicator"},
+        @{@"title": @"Button", @"pagePath": @"Button"}];
     }
     return _dataAry;
 }
