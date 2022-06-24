@@ -31,10 +31,12 @@
 - (NSArray *)dataAry {
     if (_dataAry == nil) {
         _dataAry = @[
-        @{@"title": @"跳转固定页面", @"pagePath": @"TXRNTest"},
-        @{@"title": @"ActivityIndicator", @"pagePath": @"ActivityIndicator"},
-        @{@"title": @"Button", @"pagePath": @"Button"},
-        @{@"title": @"FlatList", @"pagePath": @"FlatList"}];
+            @"TXRNTest",
+            @"ActivityIndicator",
+            @"Button",
+            @"FlatList",
+            @"Image",
+        ];
     }
     return _dataAry;
 }
@@ -57,14 +59,14 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.textLabel.text = [self.dataAry[indexPath.row] objectForKey:@"title"];
+    cell.textLabel.text = self.dataAry[indexPath.row];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    NSString *moduleName = [self.dataAry[indexPath.row] objectForKey:@"pagePath"];
+    NSString *moduleName = self.dataAry[indexPath.row];
     
     // 手动拼接jsCodeLocation用于开发环境
     NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];

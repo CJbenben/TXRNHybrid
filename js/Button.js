@@ -19,7 +19,7 @@ export default class App extends Component<Props> {
         </Text>
         <Button
           title="Press me!"
-          // onPress={() => Alert.alert('Simple Button pressed')}
+          // onPress={() => alert('Simple Button pressed')}
           onPress={() => {console.log('Simple Button pressed')}}
         />
       </View>
