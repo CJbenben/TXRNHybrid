@@ -14,6 +14,8 @@ import KeyboardAvoidingView from "./js/KeyboardAvoidingView"
 import Pressable from "./js/Pressable"
 import ScrollView from "./js/ScrollView"
 import StatusBar from "./js/StatusBar"
+import Switch from "./js/Switch"
+import Text from "./js/Text"
 AppRegistry.registerComponent(appName, () => App);
 AppRegistry.registerComponent('ActivityIndicator', () => ActivityIndicator);
 AppRegistry.registerComponent('Button', () => Button);
@@ -24,3 +26,5 @@ AppRegistry.registerComponent('KeyboardAvoidingView', () => KeyboardAvoidingView
 AppRegistry.registerComponent('Pressable', () => Pressable);
 AppRegistry.registerComponent('ScrollView', () => ScrollView);
 AppRegistry.registerComponent('StatusBar', () => StatusBar);
+AppRegistry.registerComponent('Switch', () => Switch);
+AppRegistry.registerComponent('Text', () => Text);

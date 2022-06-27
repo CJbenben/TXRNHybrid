@@ -41,6 +41,8 @@
             @"Pressable",
             @"ScrollView",
             @"StatusBar",
+            @"Switch",
+            @"Text",
         ];
     }
     return _dataAry;
