@@ -36,6 +36,7 @@
             @"Button",
             @"FlatList",
             @"Image",
+            @"ImageBackground",
         ];
     }
     return _dataAry;
