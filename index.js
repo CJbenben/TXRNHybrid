@@ -10,9 +10,11 @@ import Button from './js/Button';
 import FlatList from './js/FlatList';
 import Image from "./js/Image";
 import ImageBackground from "./js/ImageBackground";
+import KeyboardAvoidingView from "./js/KeyboardAvoidingView"
 AppRegistry.registerComponent(appName, () => App);
 AppRegistry.registerComponent('ActivityIndicator', () => ActivityIndicator);
 AppRegistry.registerComponent('Button', () => Button);
 AppRegistry.registerComponent('FlatList', () => FlatList);
 AppRegistry.registerComponent('Image', () => Image);
 AppRegistry.registerComponent('ImageBackground', () => ImageBackground);
+AppRegistry.registerComponent('KeyboardAvoidingView', () => KeyboardAvoidingView);

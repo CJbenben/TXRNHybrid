@@ -37,6 +37,7 @@
             @"FlatList",
             @"Image",
             @"ImageBackground",
+            @"KeyboardAvoidingView",
         ];
     }
     return _dataAry;
