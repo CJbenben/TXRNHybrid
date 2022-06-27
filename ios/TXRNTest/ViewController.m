@@ -38,6 +38,7 @@
             @"Image",
             @"ImageBackground",
             @"KeyboardAvoidingView",
+            @"Pressable",
         ];
     }
     return _dataAry;
