@@ -39,6 +39,8 @@
             @"ImageBackground",
             @"KeyboardAvoidingView",
             @"Pressable",
+            @"ScrollView",
+            @"StatusBar",
         ];
     }
     return _dataAry;
