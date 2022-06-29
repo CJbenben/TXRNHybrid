@@ -34,6 +34,7 @@
             @"TXRNTest",
             @"ActivityIndicator",
             @"Button",
+            @"TouchableOpacity",
             @"FlatList",
             @"Image",
             @"ImageBackground",
@@ -44,6 +45,7 @@
             @"Switch",
             @"Text",
             @"Flex",
+            @"Flex2",
             @"Test",
         ];
     }
