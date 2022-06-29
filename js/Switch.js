@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Switch, StyleSheet } from "react-native";
+import { View, Switch, StyleSheet, Text, useWindowDimensions } from "react-native";
 
 const App = () => {
   const [isEnabled, setIsEnabled] = useState(true);
@@ -7,6 +7,10 @@ const App = () => {
   const onChange = () => {
     console.log('当值改变的时候调用此回调函数');
   }
+  // 获取手机屏幕尺寸
+  const windowWidth = useWindowDimensions().width;
+  const windowHeight = useWindowDimensions().height;
+ 
   return (
     <View style={styles.container}>
       <Switch
@@ -18,6 +22,7 @@ const App = () => {
         value={isEnabled}
         disabled={false}
       />
+      <Text style={styles.text}>width={windowWidth}, height={windowHeight}</Text>
     </View>
   );
 }
@@ -27,6 +32,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center"
+  },
+  text: {
+    marginTop: 30
   }
 });
 

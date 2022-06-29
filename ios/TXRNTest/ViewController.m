@@ -43,6 +43,8 @@
             @"StatusBar",
             @"Switch",
             @"Text",
+            @"Flex",
+            @"Test",
         ];
     }
     return _dataAry;

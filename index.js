@@ -16,6 +16,9 @@ import ScrollView from "./js/ScrollView"
 import StatusBar from "./js/StatusBar"
 import Switch from "./js/Switch"
 import Text from "./js/Text"
+import Flex from './js/Flex';
+
+import Test from "./js/Test"
 AppRegistry.registerComponent(appName, () => App);
 AppRegistry.registerComponent('ActivityIndicator', () => ActivityIndicator);
 AppRegistry.registerComponent('Button', () => Button);
@@ -28,3 +31,6 @@ AppRegistry.registerComponent('ScrollView', () => ScrollView);
 AppRegistry.registerComponent('StatusBar', () => StatusBar);
 AppRegistry.registerComponent('Switch', () => Switch);
 AppRegistry.registerComponent('Text', () => Text);
+AppRegistry.registerComponent('Flex', () => Flex);
+
+AppRegistry.registerComponent('Test', () => Test);
