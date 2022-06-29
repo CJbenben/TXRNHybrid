@@ -26,6 +26,7 @@ class CustomButton extends Component {
 const styles = StyleSheet.create({
   container: {
     marginTop: 88,
+    alignItems: 'center'
   },
   btn: {
     width: 100,
