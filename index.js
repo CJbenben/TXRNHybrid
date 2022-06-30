@@ -17,6 +17,7 @@ import ScrollView from "./js/ScrollView"
 import StatusBar from "./js/StatusBar"
 import Switch from "./js/Switch"
 import Text from "./js/Text"
+import TextInput from "./js/TextInput"
 import Flex from './js/Flex'
 import Flex2 from './js/Flex2';
 import WebView from './js/WebView';
@@ -35,6 +36,7 @@ AppRegistry.registerComponent('ScrollView', () => ScrollView);
 AppRegistry.registerComponent('StatusBar', () => StatusBar);
 AppRegistry.registerComponent('Switch', () => Switch);
 AppRegistry.registerComponent('Text', () => Text);
+AppRegistry.registerComponent('TextInput', () => TextInput);
 AppRegistry.registerComponent('Flex', () => Flex);
 AppRegistry.registerComponent('Flex2', () => Flex2);
 AppRegistry.registerComponent('WebView', () => WebView);

@@ -43,10 +43,10 @@ const data = [
     title: 'Eight Item',
   },
 ];
-const Item = ({ title }) => {
+const Item = ({ item }) => {
   return (
     <View style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>{item.id}、{item.title}</Text>
     </View>
   );
 }
@@ -54,12 +54,13 @@ const Item = ({ title }) => {
 export default class App extends Component<Props> {
   render() {
     const renderItem = ({ item }) => (
-      <Item title={item.title} />
+      <Item item={item} />
     );
 
     return (
       <SafeAreaView style={styles.container}>
         <FlatList
+          numColumns={1}
           data={data}
           renderItem={renderItem}
           keyExtractor={item => item.id}
