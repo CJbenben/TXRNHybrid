@@ -7,11 +7,13 @@ import {
   Text,
   SafeAreaView,
   ScrollView,
-  View
+  View,
+  Dimensions
 } from 'react-native';
 
 // 注意：通过uri加载资源，必须设置图片尺寸
 type Props = {};
+const {width} = Dimensions.get('window')
 export default class App extends Component<Props> {
   render() {
     let networkImg = 'https://reactnative.dev/img/tiny_logo.png';
@@ -80,7 +82,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 88,
     marginHorizontal: 0,
-    marginBottom: 100,
+    // marginBottom: 100,
   },
   title: {
     textAlign: 'left',
@@ -96,11 +98,12 @@ const styles = StyleSheet.create({
   gif: {
     resizeMode: 'stretch',
     // blurRadius: 30,
+    width,
     // 设置圆角
     borderRadius: 20,
   },
   nativeImg: {
-    width: 380,
+    width,
     height: 180,
     resizeMode: 'stretch',
   },

@@ -19,6 +19,7 @@ import Switch from "./js/Switch"
 import Text from "./js/Text"
 import Flex from './js/Flex'
 import Flex2 from './js/Flex2';
+import WebView from './js/WebView';
 
 import Test from "./js/Test"
 AppRegistry.registerComponent(appName, () => App);
@@ -36,5 +37,6 @@ AppRegistry.registerComponent('Switch', () => Switch);
 AppRegistry.registerComponent('Text', () => Text);
 AppRegistry.registerComponent('Flex', () => Flex);
 AppRegistry.registerComponent('Flex2', () => Flex2);
+AppRegistry.registerComponent('WebView', () => WebView);
 
 AppRegistry.registerComponent('Test', () => Test);

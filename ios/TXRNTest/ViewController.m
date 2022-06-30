@@ -46,6 +46,7 @@
             @"Text",
             @"Flex",
             @"Flex2",
+            @"WebView",
             @"Test",
         ];
     }

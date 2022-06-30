@@ -16,6 +16,7 @@
 .gitignore.swp
 ios/TXRNTest.xcworkspace/xcuserdata/*
 ios/Pods/Pods.xcodeproj/xcuserdata/*
+ios/TXRNTest.xcodeproj/xcuserdata/*
 npm-debug.log*
 yarn-error.log
 
