@@ -12,20 +12,37 @@ export default class App extends Component<Props> {
     this.state = {
       currPage: 1
     }
-
     this.handleMomentumScrollEnd = this.handleMomentumScrollEnd.bind(this)
   }
   handleMomentumScrollEnd(e) {
-    console.log(e.nativeEvent.contentOffset.x)
+    // console.log(e.nativeEvent.contentOffset.x)
     let offsetX = e.nativeEvent.contentOffset.x
     this.setState({
       currPage: offsetX/width+1
     })
   }
+  componentDidMount() {
+    let scrollview = this.refs.scrollview;
+    let num = 0;
+
+    setInterval(() => {
+      num++
+      if (num === 3) {
+        num = 0
+      }
+      scrollview.scrollTo({
+        x: width*num,
+        y: 0,
+        animate: true
+      })
+
+    }, 2000);
+  }
   render() {
     return (
       <View style={styles.container}>
         <ScrollView 
+        ref="scrollview"
         horizontal={true}
         pagingEnabled={true}
         showsHorizontalScrollIndicator={false}
@@ -33,10 +50,12 @@ export default class App extends Component<Props> {
         >
           <View><Text style={styles.box1}>1</Text></View>
           <View><Text style={[styles.box1, styles.box2]}>2</Text></View>
+          <View><Text style={[styles.box1, styles.box3]}>3</Text></View>
         </ScrollView>
         <View style={styles.pointBox}>
           <View style={this.state.currPage == 1?styles.currPoint:styles.point}></View>
           <View style={this.state.currPage == 2?styles.currPoint:styles.point}></View>
+          <View style={this.state.currPage == 3?styles.currPoint:styles.point}></View>
         </View>
       </View>
     );
@@ -56,6 +75,9 @@ const styles = StyleSheet.create({
   },
   box2: {
     backgroundColor: '#fcf'
+  },
+  box3: {
+    backgroundColor: '#ffc'
   },
   text: {
     fontSize: 36,
