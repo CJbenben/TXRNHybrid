@@ -14,6 +14,7 @@ import ImageBackground from "./js/ImageBackground";
 import KeyboardAvoidingView from "./js/KeyboardAvoidingView"
 import Pressable from "./js/Pressable"
 import ScrollView from "./js/ScrollView"
+import Swiper from './js/Swiper';
 import StatusBar from "./js/StatusBar"
 import Switch from "./js/Switch"
 import Text from "./js/Text"
@@ -23,6 +24,7 @@ import Flex2 from './js/Flex2';
 import WebView from './js/WebView';
 
 import Test from "./js/Test"
+
 AppRegistry.registerComponent(appName, () => App);
 AppRegistry.registerComponent('ActivityIndicator', () => ActivityIndicator);
 AppRegistry.registerComponent('Button', () => Button);
@@ -33,6 +35,7 @@ AppRegistry.registerComponent('ImageBackground', () => ImageBackground);
 AppRegistry.registerComponent('KeyboardAvoidingView', () => KeyboardAvoidingView);
 AppRegistry.registerComponent('Pressable', () => Pressable);
 AppRegistry.registerComponent('ScrollView', () => ScrollView);
+AppRegistry.registerComponent('Swiper', () => Swiper);
 AppRegistry.registerComponent('StatusBar', () => StatusBar);
 AppRegistry.registerComponent('Switch', () => Switch);
 AppRegistry.registerComponent('Text', () => Text);
