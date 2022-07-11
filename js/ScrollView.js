@@ -27,13 +27,16 @@ export default class App extends Component<Props> {
 
     setInterval(() => {
       num++
-      if (num === 3) {
-        num = 0
+      if (num === 4) {
+        num = 1
+        scrollview.scrollTo({x: 0, y: 0, animated: false})
+        console.log(num+"+"+num*width)
       }
+      console.log(num+"+"+num*width)
       scrollview.scrollTo({
         x: width*num,
         y: 0,
-        animate: true
+        animated: true
       })
 
     }, 2000);
@@ -51,12 +54,13 @@ export default class App extends Component<Props> {
           <View><Text style={styles.box1}>1</Text></View>
           <View><Text style={[styles.box1, styles.box2]}>2</Text></View>
           <View><Text style={[styles.box1, styles.box3]}>3</Text></View>
+          <View><Text style={styles.box1}>1</Text></View>
         </ScrollView>
-        <View style={styles.pointBox}>
+        {/* <View style={styles.pointBox}>
           <View style={this.state.currPage == 1?styles.currPoint:styles.point}></View>
           <View style={this.state.currPage == 2?styles.currPoint:styles.point}></View>
           <View style={this.state.currPage == 3?styles.currPoint:styles.point}></View>
-        </View>
+        </View> */}
       </View>
     );
   }
