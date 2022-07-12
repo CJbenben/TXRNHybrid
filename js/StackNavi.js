@@ -62,7 +62,7 @@ function DetailsScreen({ route, navigation }) {
       />
       <Button title="回到RN首页" onPress={() => navigation.navigate('Home')} />
       <Button title="返回上一个页面" onPress={() => navigation.goBack() }/>
-
+      
       <TextInput
         style={styles.input}
         placeholder='请输入回传内容'
@@ -103,10 +103,20 @@ function App() {
             headerStyle: {
               backgroundColor: '#fcf'
             },
-            headerTintColor: '#000',
             headerTitleStyle: {
-              fontWeight: 'bold'
-            }
+              fontWeight: 'bold',
+              color: '#000'
+            },
+            headerRight: ()=> (
+              <Button title='分享'
+                color='#000'
+                onPress={()=> {
+                  console.log('分享按钮被点击');
+              }}></Button>
+            ),
+            // 自定义返回按钮颜色和图片
+            headerTintColor: '#666',
+            headerBackImageSource:{ uri: 'ic_public_navi_back', width: 24, height: 24, color: '#000'}
           }} />
         <Stack.Screen 
           name="Details" 
@@ -114,12 +124,26 @@ function App() {
           options={( {route} ) => ({
             title: route.params.title,
             headerTitleStyle: {
-              fontWeight: 'bold'
-            }
+              fontWeight: 'bold',
+              color: '#000'
+            },
+            headerBackTitleVisible: false,
+            headerBackTitleStyle: {
+              fontSize: 14
+            },
+            // 自定义返回按钮颜色和图片
+            headerTintColor: '#666',
+            headerBackImageSource:{ uri: 'ic_public_navi_back', width: 24, height: 24, color: '#000'}
           })}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+// const DefaultHeader: NativeStackNavigationOptions = {
+//   headerBackImageSource:
+//         Platform.OS === 'android'
+//             ? require('../../Resources/Images/Icons/back.png')
+//             : { uri: 'back', width: 24, height: 24 }, // pull from assets, to avoid icon changing from default to custom
+// }
 
 export default App;
