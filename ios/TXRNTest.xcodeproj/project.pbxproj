@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E47B2FDD39EF4176980EC28 /* libPods-TXRNTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E56BA8D260D18A37AADBFAE2 /* libPods-TXRNTest.a */; };
+		7DA69362287D256D0008ED37 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA69361287D256D0008ED37 /* TestViewController.m */; };
+		7DA69365287D40F60008ED37 /* PushNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA69364287D40F60008ED37 /* PushNative.m */; };
 		7DEEC72F286043350060BEDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEC72E286043350060BEDF /* AppDelegate.m */; };
 		7DEEC732286043350060BEDF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEC731286043350060BEDF /* SceneDelegate.m */; };
 		7DEEC735286043350060BEDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEC734286043350060BEDF /* ViewController.m */; };
@@ -20,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		6A65F412940828E4C8ACADAD /* Pods-TXRNTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXRNTest.release.xcconfig"; path = "Target Support Files/Pods-TXRNTest/Pods-TXRNTest.release.xcconfig"; sourceTree = "<group>"; };
+		7DA69360287D256D0008ED37 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		7DA69361287D256D0008ED37 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		7DA69363287D40F60008ED37 /* PushNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushNative.h; sourceTree = "<group>"; };
+		7DA69364287D40F60008ED37 /* PushNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushNative.m; sourceTree = "<group>"; };
 		7DEEC72A286043350060BEDF /* TXRNTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXRNTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEEC72D286043350060BEDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7DEEC72E286043350060BEDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,6 +91,10 @@
 				7DEEC731286043350060BEDF /* SceneDelegate.m */,
 				7DEEC733286043350060BEDF /* ViewController.h */,
 				7DEEC734286043350060BEDF /* ViewController.m */,
+				7DA69360287D256D0008ED37 /* TestViewController.h */,
+				7DA69361287D256D0008ED37 /* TestViewController.m */,
+				7DA69363287D40F60008ED37 /* PushNative.h */,
+				7DA69364287D40F60008ED37 /* PushNative.m */,
 				7DEEC74928606FAB0060BEDF /* main.jsbundle */,
 				7DEEC736286043350060BEDF /* Main.storyboard */,
 				7DEEC739286043370060BEDF /* Assets.xcassets */,
@@ -240,6 +250,8 @@
 				7DEEC72F286043350060BEDF /* AppDelegate.m in Sources */,
 				7DEEC740286043370060BEDF /* main.m in Sources */,
 				7DEEC732286043350060BEDF /* SceneDelegate.m in Sources */,
+				7DA69365287D40F60008ED37 /* PushNative.m in Sources */,
+				7DA69362287D256D0008ED37 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

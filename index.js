@@ -22,6 +22,8 @@ import TextInput from "./js/TextInput"
 import Flex from './js/Flex'
 import Flex2 from './js/Flex2';
 import WebView from './js/WebView';
+import StackNavi from './js/StackNavi';
+import NativeModulesDemo from './js/NativeModulesDemo';
 
 import Test from "./js/Test"
 
@@ -43,5 +45,7 @@ AppRegistry.registerComponent('TextInput', () => TextInput);
 AppRegistry.registerComponent('Flex', () => Flex);
 AppRegistry.registerComponent('Flex2', () => Flex2);
 AppRegistry.registerComponent('WebView', () => WebView);
+AppRegistry.registerComponent('StackNavi', () => StackNavi);
+AppRegistry.registerComponent('NativeModulesDemo', () => NativeModulesDemo);
 
 AppRegistry.registerComponent('Test', () => Test);

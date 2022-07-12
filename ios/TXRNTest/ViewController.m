@@ -7,10 +7,12 @@
 
 #import "ViewController.h"
 #import <React/RCTRootView.h>
+#import "TestViewController.h"
+
 //#import <React/RCTBundleURLProvider.h>
 //#import <React/RCTEventEmitter.h>
 
-@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface ViewController ()<UITableViewDataSource, UITableViewDelegate, RCTBridgeModule>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataAry;
@@ -31,6 +33,7 @@
 - (NSArray *)dataAry {
     if (_dataAry == nil) {
         _dataAry = @[
+            @"原生页面",
             @"TXRNTest",
             @"ActivityIndicator",
             @"Button",
@@ -49,6 +52,8 @@
             @"FlatList",
             @"ScrollView",
             @"Swiper",
+            @"NativeModulesDemo",
+            @"StackNavi",
             @"Test",
         ];
     }
@@ -80,6 +85,11 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    if (indexPath.row == 0) {
+        TestViewController *testVC = [[TestViewController alloc] init];
+        [self.navigationController pushViewController:testVC animated:YES];
+        return;
+    }
     NSString *moduleName = self.dataAry[indexPath.row];
     
     // 手动拼接jsCodeLocation用于开发环境
@@ -105,11 +115,26 @@
                              } launchOptions:nil];
     UIViewController *vc = [[UIViewController alloc] init];
     vc.view = rootView;
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.row == self.dataAry.count - 2) {
+        vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:vc animated:YES completion:^{
+                
+        }];
+    } else {
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 50;
+}
+
+RCT_EXPORT_MODULE();
+RCT_EXPORT_METHOD(callback:(NSString *)string) {
+    NSLog(@"string = %@, self = %@", string, self);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    });
 }
 
 @end
