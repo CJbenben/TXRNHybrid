@@ -4,19 +4,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 class Page extends Component {
-  render({ navigation }) {
+  render() {
     return (
       <View>
-        <Text>1233333333332233333331</Text>
-        <Button title='返回上一个页面' onPress={()=> {
-          navigation.goBack()
-        }}></Button>
+        <Text>Page</Text>
+        <Button title='返回上一个页面'></Button>
       </View>
     );
   }
 }
 
-const Stack = createNativeStackNavigator();
 const styles = StyleSheet.create({})
 
 export default Page;

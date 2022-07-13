@@ -33,28 +33,34 @@
 - (NSArray *)dataAry {
     if (_dataAry == nil) {
         _dataAry = @[
-            @"原生页面",
-            @"TXRNTest",
-            @"ActivityIndicator",
-            @"Button",
-            @"TouchableOpacity",
-            @"Image",
-            @"ImageBackground",
-            @"KeyboardAvoidingView",
-            @"Pressable",
-            @"StatusBar",
-            @"Switch",
-            @"Text",
-            @"TextInput",
-            @"Flex",
-            @"Flex2",
-            @"WebView",
-            @"FlatList",
-            @"ScrollView",
-            @"Swiper",
-            @"NativeModulesDemo",
-            @"StackNavi",
-            @"Test",
+            @[
+                @"原生页面",
+                @"TXRNTest",
+                @"ActivityIndicator",
+                @"Button",
+                @"TouchableOpacity",
+                @"Image",
+                @"ImageBackground",
+                @"KeyboardAvoidingView",
+                @"Pressable",
+                @"StatusBar",
+                @"Switch",
+                @"Text",
+                @"TextInput",
+                @"Flex",
+                @"Flex2",
+                @"WebView",
+                @"FlatList",
+                @"ScrollView",
+                @"Swiper",
+                @"NativeModulesDemo",
+                @"Test",
+            ],
+            // 跳转第二页走：presentViewController:animated
+            @[
+                @"StackNavi",
+                @"TabBarNavi",
+            ]
         ];
     }
     return _dataAry;
@@ -68,8 +74,13 @@
 }
 
 #pragma mark - UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataAry.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSArray *sectionAry = self.dataAry[section];
+    return sectionAry.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -78,25 +89,27 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.textLabel.text = self.dataAry[indexPath.row];
+    NSArray *sectionAry = self.dataAry[indexPath.section];
+    cell.textLabel.text = sectionAry[indexPath.row];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0 && indexPath.row == 0) {
         TestViewController *testVC = [[TestViewController alloc] init];
         [self.navigationController pushViewController:testVC animated:YES];
         return;
     }
-    NSString *moduleName = self.dataAry[indexPath.row];
+    NSArray *sectionAry = self.dataAry[indexPath.section];
+    NSString *moduleName = sectionAry[indexPath.row];
     
     // 手动拼接jsCodeLocation用于开发环境
     // 模拟器
     NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
     // 真机
-    jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.104:8081/index.bundle?platform=ios"];
+    jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.100:8081/index.bundle?platform=ios"];
     // release之后从包中读取名为main的静态js bundle
     //jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
     // 通过RCTBundleURLProvider生成，用于开发环境
@@ -115,7 +128,7 @@
                              } launchOptions:nil];
     UIViewController *vc = [[UIViewController alloc] init];
     vc.view = rootView;
-    if (indexPath.row == self.dataAry.count - 2) {
+    if (indexPath.section) {
         vc.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:vc animated:YES completion:^{
                 
