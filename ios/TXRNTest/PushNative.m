@@ -8,6 +8,7 @@
 #import "PushNative.h"
 #import "AppDelegate.h"
 #import "TestViewController.h"
+#import "CJHTTPRequest.h"
 
 @implementation PushNative
 
@@ -34,7 +35,33 @@ RCT_EXPORT_METHOD(pushNextvc:(NSString *)string) {
         [nav pushViewController:testVC animated:YES];
     });
 }
-- (void)test {
-    
+RCT_EXPORT_METHOD(httpRequest:(RCTResponseSenderBlock)callback) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self httpRequestWithGETCallBack:callback];
+    });
 }
+
+- (void)httpRequestWithGETCallBack:(RCTResponseSenderBlock)callback {
+    NSString *url = @"http://v.juhe.cn/toutiao/index";
+    url = @"http://apis.juhe.cn/simpleWeather/query";// 天气预报
+    NSDictionary *params = @{
+                             @"key":@"ad2e52a52870806cc6b3cc20001cea31",//应用APPKEY
+                             @"city":@"苏州"
+                             };
+    
+    NSLog(@"url = %@", url);
+    
+    [CJHTTPRequest httpRequestWithGETWithUrl:url params:params success:^(id result) {
+        
+        NSLog(@"responseObject = %@", result);
+        callback(@[[NSNull null], result]);
+        
+    } failure:^(NSError *error) {
+        
+        NSLog(@"error = %@", error);
+        callback(@[error, @""]);
+        
+    }];
+}
+
 @end

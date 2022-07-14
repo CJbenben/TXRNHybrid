@@ -22,6 +22,7 @@ target 'TXRNTest' do
   pod 'TXBaseKit', '= 0.2.7'
   pod 'TXCategoryKit', '= 0.2.98'
   pod 'TXCommonKit', '= 0.2.3'
+  pod "AFNetworking"
   
   # target 'TXRNTestTests' do
   #   inherit! :complete
