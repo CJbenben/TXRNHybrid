@@ -7,7 +7,6 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Page from '../pages/Page';
 import Home from '../pages/Home';
 import Settings from '../pages/Settings';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import global from '../global/global';
 
 const Tab = createBottomTabNavigator();

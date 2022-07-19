@@ -15,6 +15,7 @@
 .DS_Store
 .gitignore.swp
 ios/TXRNTest.xcworkspace/xcuserdata/*
+ios/TXRNTest.xcodeproj/xcuserdata/*
 ios/Pods/Pods.xcodeproj/xcuserdata/*
 ios/TXRNTest.xcodeproj/xcuserdata/*
 npm-debug.log*

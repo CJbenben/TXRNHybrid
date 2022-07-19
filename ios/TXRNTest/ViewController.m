@@ -50,10 +50,12 @@
                 @"Flex",
                 @"Flex2",
                 @"WebView",
+                @"Icon",
                 @"FlatList",
                 @"ScrollView",
                 @"Swiper",
                 @"NativeModulesDemo",
+                @"LifeCycle",
                 @"Test",
             ],
             // 跳转第二页走：presentViewController:animated
