@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Alert,
-  Button,
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+  Alert, Button, Platform, StyleSheet, Text, View, Linking} from 'react-native';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -36,6 +30,12 @@ export default class App extends Component<Props> {
             })
           }}
         />
+        <Button title='跳转花猫H5页面' onPress={()=>{
+          Linking.openURL('https://famall.famalltech.com/')
+        }}></Button>
+        <Button title='打开微信' onPress={()=>{
+          Linking.openURL('weixin://')
+        }}></Button>
       </View>
     );
   }

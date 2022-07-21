@@ -1,4 +1,5 @@
 // 使用第三方库 react-native-vector-icons
+// 所有 icon 资源在这里搜索查询：https://oblador.github.io/react-native-vector-icons/
 import React, { Component } from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';

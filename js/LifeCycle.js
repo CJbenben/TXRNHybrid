@@ -1,3 +1,4 @@
+// 1.react-native的生命周期
 import React, { Component } from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
