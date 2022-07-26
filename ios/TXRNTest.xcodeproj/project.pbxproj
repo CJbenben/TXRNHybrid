@@ -34,6 +34,7 @@
 		7DBBD197288FBDC8005CD699 /* back-icon-mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DBBD18F288FBDC8005CD699 /* back-icon-mask.png */; };
 		7DBBD198288FBDC8005CD699 /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DBBD191288FBDC8005CD699 /* gif.gif */; };
 		7DBBD199288FBDC8005CD699 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DBBD192288FBDC8005CD699 /* logo.png */; };
+		7DBBD19B288FD7C8005CD699 /* ip.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7DBBD19A288FD7C8005CD699 /* ip.txt */; };
 		7DEEC72F286043350060BEDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEC72E286043350060BEDF /* AppDelegate.m */; };
 		7DEEC732286043350060BEDF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEC731286043350060BEDF /* SceneDelegate.m */; };
 		7DEEC735286043350060BEDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEC734286043350060BEDF /* ViewController.m */; };
@@ -74,6 +75,7 @@
 		7DBBD18F288FBDC8005CD699 /* back-icon-mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-icon-mask.png"; sourceTree = "<group>"; };
 		7DBBD191288FBDC8005CD699 /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
 		7DBBD192288FBDC8005CD699 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		7DBBD19A288FD7C8005CD699 /* ip.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ip.txt; sourceTree = "<group>"; };
 		7DEEC72A286043350060BEDF /* TXRNTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXRNTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEEC72D286043350060BEDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7DEEC72E286043350060BEDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				7DA69364287D40F60008ED37 /* PushNative.m */,
 				7DA69367287EB5030008ED37 /* CJHTTPRequest.h */,
 				7DA69366287EB5030008ED37 /* CJHTTPRequest.m */,
+				7DBBD19A288FD7C8005CD699 /* ip.txt */,
 				7D0674E0288688BD0074B4F7 /* Resource */,
 				7DEEC736286043350060BEDF /* Main.storyboard */,
 				7DEEC739286043370060BEDF /* Assets.xcassets */,
@@ -338,6 +341,7 @@
 				7D06752028868D280074B4F7 /* EvilIcons.ttf in Resources */,
 				7DEEC738286043350060BEDF /* Main.storyboard in Resources */,
 				7D06751C28868D280074B4F7 /* FontAwesome5_Solid.ttf in Resources */,
+				7DBBD19B288FD7C8005CD699 /* ip.txt in Resources */,
 				7D06751828868D280074B4F7 /* MaterialCommunityIcons.ttf in Resources */,
 				7DBBD197288FBDC8005CD699 /* back-icon-mask.png in Resources */,
 				7DBBD196288FBDC8005CD699 /* back-icon.png in Resources */,

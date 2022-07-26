@@ -7,9 +7,8 @@
 
 #import "ViewController.h"
 #import <React/RCTRootView.h>
+#import <React/RCTBundleURLProvider.h>
 #import "TestViewController.h"
-
-//#import <React/RCTBundleURLProvider.h>
 //#import <React/RCTEventEmitter.h>
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, RCTBridgeModule>
@@ -107,15 +106,10 @@
     NSArray *sectionAry = self.dataAry[indexPath.section];
     NSString *moduleName = sectionAry[indexPath.row];
     
-    // 手动拼接jsCodeLocation用于开发环境
-    // 模拟器
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
-    // 真机
-    jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.105:8081/index.bundle?platform=ios"];
-    // release之后从包中读取名为main的静态js bundle
+    // 开发环境：通过RCTBundleURLProvider生成
+    NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
+    // 生产环境：从包中读取名为 index 的静态 jsbundle
     //jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"jsbundle"];
-    // 通过RCTBundleURLProvider生成，用于开发环境
-    //jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:moduleName initialProperties:
                              @{ @"scores" : @[
                                  @{
