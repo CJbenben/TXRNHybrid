@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "yarn react-native start",
-    "bundle-ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ./ios/bundle/index.jsbundle --assets-dest ./ios/bundle"
+    "bundle-ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ./ios/bundle/main.jsbundle --assets-dest ./ios/bundle"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.3.2",
