@@ -78,7 +78,7 @@ class NativeModulesDemo extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center'
+    marginTop: 88
   },
   item: {
     backgroundColor: '#f9c2ff',

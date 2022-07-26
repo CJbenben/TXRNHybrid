@@ -111,9 +111,9 @@
     // 模拟器
     NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
     // 真机
-    jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.100:8081/index.bundle?platform=ios"];
+    jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.105:8081/index.bundle?platform=ios"];
     // release之后从包中读取名为main的静态js bundle
-    //jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+    //jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"jsbundle"];
     // 通过RCTBundleURLProvider生成，用于开发环境
     //jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:moduleName initialProperties:
